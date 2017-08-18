@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">SOPCompliance</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_data_empty">This field is required</string>
+    <string name="error_loading">This field is required</string>
+    <string name="string_hotspot_notif">Please verify the spot. Thank You!</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="string_login_page">SOP Compliance</string>
+
+    <string name="tab_1">Label 1</string>
+    <string name="tab_2">Label 2</string>
+    <string name="tab_3">Label 3</string>
+    <string name="tab_4">Label 4</string>
+    <string name="tab_5">Label 5</string>
+    <string name="menu_1">Mineral Entry</string>
+    <string name="menu_2">Gambut Entry</string>
+    <string name="menu_3">AC Seedling</string>
+    <string name="menu_4">AC Cutting</string>
+    <string name="menu_5">EP Cutting</string>
+
+    <string-array name="location">
+        <item>Babel</item>
+        <item>HQ</item>
+        <item>Jambi</item>
+        <item>Palembang</item>
+        <item>Perawang</item>
+        <item>Pontianak</item>
+        <item>Samarinda</item>
+        <item>Tarakan</item>
+    </string-array>
+    <string-array name="locationID">
+        <item>17</item>
+        <item>00</item>
+        <item>06</item>
+        <item>03</item>
+        <item>01</item>
+        <item>05</item>
+        <item>04</item>
+        <item>07</item>
+    </string-array>
+</resources>
