@@ -34,9 +34,9 @@
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.main.home.homeActivity"
+            android:name=".ui.main.menu.menuActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppTheme.Dark"
             android:windowSoftInputMode="adjustResize" />
     </application>
 </manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item name="tabMinerals" type="id"/>
+  <item name="viewpagerMinerals" type="id"/>
+  <item name="viewpagertabMinerals" type="id"/>
+
+
+  <item name="tabGambuts" type="id"/>
+  <item name="viewpagerGambuts" type="id"/>
+  <item name="viewpagertabGambuts" type="id"/>
+</resources>

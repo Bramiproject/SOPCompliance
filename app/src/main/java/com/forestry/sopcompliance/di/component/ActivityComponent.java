@@ -5,8 +5,8 @@ import android.app.Activity;
 import com.forestry.sopcompliance.data.local.dao.HotspotVerificationTableDAO;
 import com.forestry.sopcompliance.di.ActivityScope;
 import com.forestry.sopcompliance.di.module.ActivityModule;
-import com.forestry.sopcompliance.ui.main.home.homeActivity;
-import com.forestry.sopcompliance.ui.main.homeFragment.homeFragmentActivity;
+import com.forestry.sopcompliance.ui.main.menuFragment.menuFragmentActivity;
+import com.forestry.sopcompliance.ui.main.menu.menuActivity;
 import com.forestry.sopcompliance.ui.main.login.loginActivity;
 import com.forestry.sopcompliance.ui.main.splash.splashScreenActivity;
 
@@ -30,7 +30,7 @@ public interface ActivityComponent {
 
     void inject(splashScreenActivity splashScreenActivity);
 
-    void inject(homeActivity homeActivity);
+    void inject(menuActivity menuActivity);
 
-    void inject(homeFragmentActivity homeFragmentActivity);
+    void inject(menuFragmentActivity menuFragmentActivity);
 }

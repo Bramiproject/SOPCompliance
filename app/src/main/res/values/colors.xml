@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#001E3A</color>
     <color name="colorPrimaryDarker">#001E3A</color>
     <color name="colorAccent">#001E3A</color>
+    <color name="transparent">#00000000</color>
 
     <color name="black">#000000</color>
     <color name="jet">#222222</color>
@@ -14,6 +15,7 @@
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
+    <color name="black_20">#33000000</color>
 
 
 
@@ -61,10 +63,10 @@
     <color name="color_notification_text">#3E4757</color>
 
     <array name="tab_colors">
-        <item name="tab_1">#9C27B0</item>
-        <item name="tab_2">#673AB7</item>
-        <item name="tab_3">#3F51B5</item>
-        <item name="tab_4">#03A9F4</item>
-        <item name="tab_5">#8BC34A</item>
+        <item name="tab_1">#4285F4</item>
+        <item name="tab_2">#EA4335</item>
+        <item name="tab_3">#FBBC05</item>
+        <item name="tab_4">#34A853</item>
+        <item name="tab_5">#EA4335</item>
     </array>
 </resources>

@@ -1,4 +1,4 @@
-package com.forestry.sopcompliance.ui.main.home;
+package com.forestry.sopcompliance.ui.main.menu;
 
 import android.content.Context;
 
@@ -11,29 +11,29 @@ import javax.inject.Inject;
  * Created by abrami on 8/16/2017.
  */
 
-public class homePresenter implements BasePresenter<homeView> {
+public class menuPresenter implements BasePresenter<menuView> {
 
-    private homeView homeView;
+    private menuView menuView;
     private UserSession userSession;
     private Context context;
 
     @Inject
-    public homePresenter(UserSession userSession){
+    public menuPresenter(UserSession userSession){
         this.userSession=userSession;
     }
 
     public void sethomePresenter(){
-        this.homeView.initUI();
+        this.menuView.initUI();
     }
 
     @Override
-    public void attachView(homeView view, Context ctx) {
-        this.homeView = view;
+    public void attachView(menuView view, Context ctx) {
+        this.menuView = view;
         this.context = ctx;
     }
 
     @Override
     public void detachView() {
-        homeView = null;
+        menuView = null;
     }
 }

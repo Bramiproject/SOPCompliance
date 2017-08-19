@@ -1,14 +1,11 @@
-package com.forestry.sopcompliance.ui.main.home;
+package com.forestry.sopcompliance.ui.main.menu;
 
 import android.animation.Animator;
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.util.Log;
 import android.view.View;
@@ -17,11 +14,10 @@ import android.view.animation.OvershootInterpolator;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
-import com.aurelhubert.ahbottomnavigation.notification.AHNotification;
 import com.forestry.sopcompliance.R;
 import com.forestry.sopcompliance.ui.base.BaseActivity;
-import com.forestry.sopcompliance.ui.main.homeFragment.homeFragmentActivity;
-import com.forestry.sopcompliance.ui.main.homeFragment.homeViewPagerAdapter;
+import com.forestry.sopcompliance.ui.main.menuFragment.menuFragmentActivity;
+import com.forestry.sopcompliance.ui.main.menuFragment.menuViewPagerAdapter;
 
 import java.util.ArrayList;
 
@@ -35,10 +31,10 @@ import butterknife.OnClick;
  * Created by abrami on 8/16/2017.
  */
 
-public class homeActivity extends BaseActivity implements homeView {
+public class menuActivity extends BaseActivity implements menuView {
 
     @Inject
-    homePresenter presenter;
+    menuPresenter presenter;
 
     @BindView(R.id.bottom_navigation)
     AHBottomNavigation bottomNavigation;
@@ -55,8 +51,8 @@ public class homeActivity extends BaseActivity implements homeView {
     private AHBottomNavigationItem acCutting;
     private AHBottomNavigationItem epCutting;
 
-    private homeFragmentActivity currentFragment;
-    private homeViewPagerAdapter adapter;
+    private menuFragmentActivity currentFragment;
+    private menuViewPagerAdapter adapter;
     private ArrayList<AHBottomNavigationItem> bottomNavigationItems = new ArrayList<>();
     private Handler handler = new Handler();
 
@@ -193,7 +189,7 @@ public class homeActivity extends BaseActivity implements homeView {
         bottomNavigation.setOnNavigationPositionListener(y -> Log.d("DemoActivity", "BottomNavigation Position: " + y));
 
         viewPager.setOffscreenPageLimit(4);
-        adapter = new homeViewPagerAdapter(getSupportFragmentManager());
+        adapter = new menuViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         currentFragment = adapter.getCurrentFragment();
@@ -203,8 +199,8 @@ public class homeActivity extends BaseActivity implements homeView {
             // Setting custom colors for notification
             AHNotification notification = new AHNotification.Builder()
                     .setText(":)")
-                    .setBackgroundColor(ContextCompat.getColor(homeActivity.this, R.color.color_notification_back))
-                    .setTextColor(ContextCompat.getColor(homeActivity.this, R.color.color_notification_text))
+                    .setBackgroundColor(ContextCompat.getColor(menuActivity.this, R.color.color_notification_back))
+                    .setTextColor(ContextCompat.getColor(menuActivity.this, R.color.color_notification_text))
                     .build();
             bottomNavigation.setNotification(notification, 1);
             Snackbar.make(bottomNavigation, "Snackbar with bottom navigation",

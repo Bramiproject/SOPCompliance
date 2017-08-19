@@ -1,4 +1,4 @@
-package com.forestry.sopcompliance.ui.main.home;
+package com.forestry.sopcompliance.ui.main.menu;
 
 import com.forestry.sopcompliance.ui.base.BaseView;
 
@@ -6,7 +6,7 @@ import com.forestry.sopcompliance.ui.base.BaseView;
  * Created by abrami on 8/16/2017.
  */
 
-public interface homeView extends BaseView {
+public interface menuView extends BaseView {
 
     void initUI();
 }

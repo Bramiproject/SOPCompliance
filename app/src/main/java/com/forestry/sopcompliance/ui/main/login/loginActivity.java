@@ -10,23 +10,18 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.AppCompatButton;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.forestry.sopcompliance.MainActivity;
 import com.forestry.sopcompliance.R;
 import com.forestry.sopcompliance.data.model.User;
 import com.forestry.sopcompliance.data.remote.response.LoginResponseEnvelope;
 import com.forestry.sopcompliance.databinding.ActivityLoginBinding;
 import com.forestry.sopcompliance.services.UserSession;
 import com.forestry.sopcompliance.ui.base.BaseActivity;
-import com.forestry.sopcompliance.ui.main.home.homeActivity;
+import com.forestry.sopcompliance.ui.main.menu.menuActivity;
 import com.forestry.sopcompliance.utils.PermissionUtils;
 
 import javax.inject.Inject;
@@ -77,7 +72,7 @@ public class loginActivity extends BaseActivity implements loginView {
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
         if (userSession.isUserLoggedIn()) {
-            startActivity(new Intent(loginActivity.this, homeActivity.class));
+            startActivity(new Intent(loginActivity.this, menuActivity.class));
         }
 
         presenter.attachView(this, getContext());
@@ -172,7 +167,7 @@ public class loginActivity extends BaseActivity implements loginView {
     public void showData(String username) {
         //Toast.makeText(this, "Login atas nama " + username + " berhasil.", Toast.LENGTH_SHORT).show();
         Snackbar.make(coordinatorLayout, "Hello " + username + " anda berhasil login.", Snackbar.LENGTH_LONG).show();
-        Intent i = new Intent(loginActivity.this, MainActivity.class);
+        Intent i = new Intent(loginActivity.this, menuActivity.class);
         i.putExtra("USERNAME", username);
         startActivity(i);
         finish();
